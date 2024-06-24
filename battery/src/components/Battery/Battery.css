@@ -1,6 +1,33 @@
 .battery {
-    width: 200px;
-    height: 400px;
+    width: 85px;
+    height: 160px;
     border: 5px solid #1d2733;
     border-radius: 20px;
-}   
+    margin: 0 auto 0 auto;
+    position: relative;
+    padding: 2px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.battery:before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 10px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: #1d2733;
+}
+
+.battery__content {
+    width: 95%;
+    height: 95%;
+    background-color: aliceblue;
+    border-radius: 17px;
+}

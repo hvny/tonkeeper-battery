@@ -1,3 +1,9 @@
+@keyframes gradient {
+    0% {background-position: 0% 25%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 .page {
     background-color: #0f1620;
     min-height: 100vh;
@@ -20,12 +26,5 @@
     -webkit-text-fill-color: transparent;
     background-size: 200% 100%;
     animation: gradient 5s ease infinite;
-
+    margin-bottom: 75px;
 }
-
-
-@keyframes gradient {
-    0% {background-position: 0% 25%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
