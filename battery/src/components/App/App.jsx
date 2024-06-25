@@ -10,22 +10,27 @@ function App() {
     {
       id: 1,
       title: `Что такое Батарейка и для чего она нужна?`,
-      description: "test1test1"
+      description: "test1test1",
+      animationClassName: "battery_animation_gradient",
     },
     {
       id: 2,
       title: "Как использовать Батарейку?",
-      description: "test1test1"
+      description: "test1test1",
+      animationClassName: "battery_animation_pulse battery_animation_gradient",
+
     },
     {
       id: 3,
       title: "Как пополнить Батарейку?",
-      description: "test1test1"
+      description: "test1test1",
+      animationClassName: "battery_animation_fill",
     },
     {
       id: 4,
       title: "Возврат средств за Батарейку",
-      description: "test1test1"
+      description: "test1test1",
+      animationClassName: "battery_animation_fade",
     },
   ]
 

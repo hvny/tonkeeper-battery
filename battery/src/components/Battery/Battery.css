@@ -1,11 +1,98 @@
+@keyframes gradientBattery {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulseBattery {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fillBattery {
+    0% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 25%, transparent 20%);
+    }
+    10% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 30%, transparent 20%);
+    }
+    20% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 35%, transparent 20%);
+    }
+    30% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 40%, transparent 20%);
+    }
+    40% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 45%, transparent 20%);
+    }
+    50% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 50%, transparent 20%);
+    }
+    55% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 55%, transparent 20%);
+    }
+    60% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 60%, transparent 20%);
+    }
+    65% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 65%, transparent 20%);
+    }
+    70% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 70%, transparent 20%);
+    }
+    75% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 75%, transparent 20%);
+    }
+    80% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 80%, transparent 20%);
+    }
+    85% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 85%, transparent 20%);
+    }
+    90% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 90%, transparent 20%);
+    }
+    95% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 95%, transparent 20%);
+    }
+    100% {
+        background-image: linear-gradient(to top, rgb(43, 248, 43) 95%, transparent 20%);
+    }
+}
+
+@keyframes fadeBattery {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 .battery {
     width: 85px;
     height: 160px;
-    border: 5px solid #1d2733;
+    border: 5px solid #283341;
     border-radius: 20px;
     margin: 0 auto 0 auto;
     position: relative;
-    padding: 2px;
+    padding: 4px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -22,12 +109,51 @@
     height: 10px;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
-    background-color: #1d2733;
+    background-color: #283341;
 }
 
 .battery__content {
-    width: 95%;
-    height: 95%;
-    background-color: aliceblue;
-    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+    border-radius: 17px; 
+    position: relative;
+}
+
+.battery__image {
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* анимация для градиента */
+.battery_animation_gradient {
+    background-image: linear-gradient(90deg, #ff0080, #0196f0, #00ffff, #0080ff, #8000ff, #ff0080);
+    background-size: 1000% 1000%;
+    animation: gradientBattery 13s linear infinite;
+}
+
+/* анимация для пульсации */
+.battery:has(> .battery_animation_pulse){
+    animation: pulseBattery 3s infinite;
+}
+
+/* анимация для заполнения батарейки */
+.battery_animation_fill {
+    background-image: linear-gradient(to top, rgb(43, 248, 43) 25%, transparent 20%);
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    animation: fillBattery 5s linear infinite;
+}
+
+/* анимация для затухания батарейки */
+
+.battery_animation_fade {
+    background-image: linear-gradient(to top, rgb(248, 27, 27) 25%, transparent 20%);
+}
+
+.battery:has(> .battery_animation_fade){
+    animation: fadeBattery 3s infinite;
 }
