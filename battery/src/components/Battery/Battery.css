@@ -22,68 +22,33 @@
     }
 }
 
-@keyframes fillBattery {
+@keyframes fadeBattery {
     0% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 25%, transparent 20%);
-    }
-    10% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 30%, transparent 20%);
-    }
-    20% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 35%, transparent 20%);
-    }
-    30% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 40%, transparent 20%);
-    }
-    40% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 45%, transparent 20%);
+        opacity: 1;
     }
     50% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 50%, transparent 20%);
-    }
-    55% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 55%, transparent 20%);
-    }
-    60% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 60%, transparent 20%);
-    }
-    65% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 65%, transparent 20%);
-    }
-    70% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 70%, transparent 20%);
-    }
-    75% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 75%, transparent 20%);
-    }
-    80% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 80%, transparent 20%);
-    }
-    85% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 85%, transparent 20%);
-    }
-    90% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 90%, transparent 20%);
-    }
-    95% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 95%, transparent 20%);
+        opacity: 0.5;
     }
     100% {
-        background-image: linear-gradient(to top, rgb(43, 248, 43) 95%, transparent 20%);
+        opacity: 1;
     }
 }
 
-@keyframes fadeBattery {
+@keyframes fillBattery {
     0% {
-      opacity: 1;
+        height: 20px;
     }
     50% {
-      opacity: 0.5;
+        height: 100%;
+        border-top-left-radius: 17px;
+        border-top-right-radius: 17px;
     }
     100% {
-      opacity: 1;
+        height: 20px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
-  }
+}
 
 .battery {
     width: 85px;
@@ -124,6 +89,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 2;
     transform: translateX(-50%) translateY(-50%);
 }
 
@@ -141,13 +107,17 @@
 
 /* анимация для заполнения батарейки */
 .battery_animation_fill {
-    background-image: linear-gradient(to top, rgb(43, 248, 43) 25%, transparent 20%);
-    background-size: 100% 100%;
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    animation: fillBattery 5s linear infinite;
+    background-color: #2bf82b;
+    height: 20px;
+    border-radius: 0;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    animation: fillBattery 7s linear infinite;
 }
 
+.battery:has(> .battery_animation_fill){
+    align-items: end;
+}
 /* анимация для затухания батарейки */
 
 .battery_animation_fade {

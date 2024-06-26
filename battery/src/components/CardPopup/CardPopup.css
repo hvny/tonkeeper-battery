@@ -1,0 +1,36 @@
+@keyframes fadeInPopup {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .5);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.popup_opened {
+    display: flex;
+    animation: fadeInPopup 0.2s ease-in;
+}
+
+.popup__container {
+    width: 750px;
+    height: 450px;
+    border: 7px solid #1d2733;
+    background-color: #1d2733;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 20px rgba(146, 146, 146, 0.1);
+}
