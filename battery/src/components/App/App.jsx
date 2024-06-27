@@ -1,11 +1,12 @@
 import './App.css';
+import "../Button/Button.css";
 
 import Header from '../Header/Header';
 import About from '../About/About';
 import CardsContainer from '../CardsContainer/CardsContainer';
 import CardPopup from '../CardPopup/CardPopup';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const cardsArr=[
@@ -47,6 +48,20 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [isCardPopupOpen, setIsCardPopupOpen] = useState(false);
 
+  useEffect(() => {
+    function closeByEscape(evt) {
+      if(evt.key === 'Escape') {
+        closePopup();
+      }
+    }
+    if(isCardPopupOpen) {
+      document.addEventListener('keydown', closeByEscape);
+      return () => {
+        document.removeEventListener('keydown', closeByEscape);
+      }
+    }
+  }, [isCardPopupOpen]); 
+
   function handleCardClick(card) {
     setSelectedCard(card);
     setIsCardPopupOpen(!isCardPopupOpen);
@@ -65,7 +80,7 @@ function App() {
         {/* <Battery /> */}
       </main>
 
-      <CardPopup card={selectedCard} isOpen={isCardPopupOpen} onCLose={closePopup}/>
+      <CardPopup card={selectedCard} isOpen={isCardPopupOpen} onClose={closePopup}/>
     </div>
   );
 }
