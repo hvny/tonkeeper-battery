@@ -1,4 +1,5 @@
 import "./CardPopup.css";
+import Battery from "../Battery/Battery";
 
 export default function CardPopup({ card, isOpen, onClose }) {
 
@@ -7,13 +8,24 @@ export default function CardPopup({ card, isOpen, onClose }) {
             onClose();
         }
     };
-
+    // console.log(card.description.forE);
     return (
         <div className={`popup ${isOpen && "popup_opened"}`} onClick={handleWindowClick}>
             <div className="popup__container">
                 <h2 className="popup__title">{card.title}</h2>
+                <hr className="popup__line" />
                 <div className="popup__description-container">
-                    <p className="popup__description">{card.description}</p>
+                    { 
+                        card.description instanceof Array ?
+                        card.description.map((paragraph, index) => (
+                            <p className="popup__paragraph" key={index}>{paragraph}</p>
+                        ))
+                        :
+                        <p className="popup__paragraph">{card.description}</p>
+                    }
+                </div>
+                <div className="popup__battery-container">
+                    <Battery additionalClassName={card.animationClassName} />
                 </div>
                 <button className="button popup__button popup__button_close" onClick={onClose}>&#10006;</button>
             </div>

@@ -1,7 +1,6 @@
 import "./Card.css";
 
 import Battery from "../Battery/Battery";
-import CardPopup from "../CardPopup/CardPopup";
 
 export default function Card({ card, cardOnClick }) {
     const modifiedTitle = card.title.replace(' и ', '\nи ');
