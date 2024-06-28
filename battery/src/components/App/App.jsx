@@ -78,11 +78,13 @@ function App() {
 
   return (
     <div className="page">
+      <div className="page_gradient_left page_gradient_side"></div>
+      <div className="page_gradient_right page_gradient_side"></div>
       <main className="main">
         <div className="main__title-container">
           <h1 className="main__title">Батарейка Тонкипера</h1>
           <a className="main__link main__link_tonkeeper" href="https://tonkeeper.com/" target='_blank'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="59" fill="none" viewBox="0 0 97 96"><path fill="#45AEF5" d="M48.5 45.333 91.167 26 48.5 93.333z" opacity="0.75"></path><path fill="#45AEF5" d="M48.5 45.333 5.833 26 48.5 93.333z" opacity="0.5"></path><path fill="#45AEF5" d="M48.5 45.333 5.833 26 48.5 6.667 91.167 26z"></path></svg>
+            <svg className="main__logo" xmlns="http://www.w3.org/2000/svg" width="60" height="59" fill="none" viewBox="0 0 97 96"><path fill="#45AEF5" d="M48.5 45.333 91.167 26 48.5 93.333z" opacity="0.75"></path><path fill="#45AEF5" d="M48.5 45.333 5.833 26 48.5 93.333z" opacity="0.5"></path><path fill="#45AEF5" d="M48.5 45.333 5.833 26 48.5 6.667 91.167 26z"></path></svg>
           </a>
         </div>
         <CardsContainer cardsArr={cardsArr} cardOnClick={handleCardClick} />
