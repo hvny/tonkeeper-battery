@@ -1,4 +1,5 @@
 import "./CardPopup.css";
+
 import Battery from "../Battery/Battery";
 
 export default function CardPopup({ card, isOpen, onClose }) {
@@ -8,7 +9,7 @@ export default function CardPopup({ card, isOpen, onClose }) {
             onClose();
         }
     };
-    // console.log(card.description.forE);
+
     return (
         <div className={`popup ${isOpen && "popup_opened"}`} onClick={handleWindowClick}>
             <div className="popup__container">
