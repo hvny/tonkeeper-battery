@@ -37,7 +37,7 @@
     position: relative;
     color: #ffffff;
     padding: 0 30px;
-    overflow-y: auto
+    /* overflow-y: auto */
 }
 
 .popup__button {
