@@ -11,13 +11,13 @@ export default function CardPopup({ card, isOpen, onClose }) {
         }
     };
 
-    useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
-    }, [isOpen]);
+    // useEffect(() => {
+    //     if (isOpen) {
+    //         document.body.style.overflow = 'hidden';
+    //     } else {
+    //         document.body.style.overflow = '';
+    //     }
+    // }, [isOpen]);
 
     return (
         <div className={`popup ${isOpen && "popup_opened"}`} onClick={handleWindowClick}>

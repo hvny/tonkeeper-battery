@@ -165,4 +165,8 @@
     .popup__line {
         margin-bottom: 20px 
     }
+
+    body:has(.popup_opened) {
+        overflow: hidden;
+    }
 }
