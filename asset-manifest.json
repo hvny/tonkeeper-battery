@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tonkeeper-battery/static/css/main.e62c6749.css",
-    "main.js": "/tonkeeper-battery/static/js/main.50dee175.js",
+    "main.css": "/tonkeeper-battery/static/css/main.10d98f32.css",
+    "main.js": "/tonkeeper-battery/static/js/main.ab520e4a.js",
     "static/js/453.ea84ea30.chunk.js": "/tonkeeper-battery/static/js/453.ea84ea30.chunk.js",
     "static/media/Roboto-Medium.woff": "/tonkeeper-battery/static/media/Roboto-Medium.b14ca2d2b289afceb0b0.woff",
     "static/media/Roboto-Bold.woff": "/tonkeeper-battery/static/media/Roboto-Bold.3f2cbde6b72e8d05669f.woff",
@@ -11,12 +11,12 @@
     "static/media/Roboto-Regular.woff2": "/tonkeeper-battery/static/media/Roboto-Regular.a25806274237d06e00a6.woff2",
     "index.html": "/tonkeeper-battery/index.html",
     "static/media/lightning.svg": "/tonkeeper-battery/static/media/lightning.1f5a1cc2fec8781b321a2578d039810e.svg",
-    "main.e62c6749.css.map": "/tonkeeper-battery/static/css/main.e62c6749.css.map",
-    "main.50dee175.js.map": "/tonkeeper-battery/static/js/main.50dee175.js.map",
+    "main.10d98f32.css.map": "/tonkeeper-battery/static/css/main.10d98f32.css.map",
+    "main.ab520e4a.js.map": "/tonkeeper-battery/static/js/main.ab520e4a.js.map",
     "453.ea84ea30.chunk.js.map": "/tonkeeper-battery/static/js/453.ea84ea30.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e62c6749.css",
-    "static/js/main.50dee175.js"
+    "static/css/main.10d98f32.css",
+    "static/js/main.ab520e4a.js"
   ]
 }
