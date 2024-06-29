@@ -2,13 +2,22 @@ import "./CardPopup.css";
 
 import Battery from "../Battery/Battery";
 
-export default function CardPopup({ card, isOpen, onClose }) {
+import { useEffect } from "react";
 
+export default function CardPopup({ card, isOpen, onClose }) {
     const handleWindowClick = (evt) => {
         if (evt.target.classList.contains("popup")) {
             onClose();
         }
     };
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [isOpen]);
 
     return (
         <div className={`popup ${isOpen && "popup_opened"}`} onClick={handleWindowClick}>
