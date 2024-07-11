@@ -17,6 +17,6 @@
 * Именование классов по методологии [БЭМ](https://ru.bem.info/methodology/naming-convention/);
 
 ## Результат 
-Ссылка на [gh-pages](https://hvny.github.io/tonkeeper-battery/).<br>
-Ссылка на [репозиторий](https://github.com/hvny/tonkeeper-battery).
+* Ссылка на [gh-pages](https://hvny.github.io/tonkeeper-battery/).
+* Ссылка на [репозиторий](https://github.com/hvny/tonkeeper-battery).
 
